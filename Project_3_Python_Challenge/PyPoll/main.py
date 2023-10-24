@@ -105,13 +105,10 @@ with open(election_csv) as csvfile:
     for txt in print_results:
         print(txt) 
 
-
 output_path = os.path.join('Analysis', 'election_results.txt')
 
 with open(output_path, 'w') as file:
 
-    csvwriter = csv.writer(file, delimiter = ",")
-
     for txt in print_results:
-
-      csvwriter.writerow([txt])
+       
+        file.write(f"{txt}\n")
